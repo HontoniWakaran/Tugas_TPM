@@ -9,24 +9,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  http: ^1.2.0
+  flutter_secure_storage: ^9.2.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  local_auth: ^2.3.0
+  sensors_plus: ^5.0.1
+  url_launcher: ^6.3.0
+  flutter_local_notifications: ^17.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
-  cupertino_icons: ^1.0.8
 
 flutter:
   uses-material-design: true
-
-# --- Tambahan untuk Orang A (Logika & Data) ---
-  http: ^1.2.0                  # Untuk mengambil API (Lokal & Publik)
-  flutter_secure_storage: ^9.2.2 # Untuk menyimpan token session login dengan aman
-  hive: ^2.2.3                  # Untuk database lokal (Keranjang Pesanan)
-  hive_flutter: ^1.1.0          # Pasangan wajib untuk hive di Flutter
-  
-  # --- Tambahan untuk Orang B (UI, Sensor, Hardware) ---
-  local_auth: ^2.3.0            # Untuk fitur Login Biometrik
-  sensors_plus: ^5.0.1          # Untuk fitur Accelerometer & Gyroscope
-  url_launcher: ^6.3.0          # Untuk fitur LBS (Buka Google Maps)
-  flutter_local_notifications: ^17.2.1 # Untuk Notifikasi
