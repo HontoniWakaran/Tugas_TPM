@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart'; // TAMBAHAN 1: Import Hive
 
-void main() {
+// TAMBAHAN 2: Ubah main() menjadi async karena proses database butuh waktu tunggu
+void main() async { 
+  // TAMBAHAN 3: Baris wajib jika main() menggunakan async
+  WidgetsFlutterBinding.ensureInitialized(); 
+  
+  // TAMBAHAN 4: Menyiapkan dan membuka folder database lokal untuk keranjang
+  await Hive.initFlutter();
+  await Hive.openBox('cart_box'); 
+
   runApp(const CaterSmartApp());
 }
 
