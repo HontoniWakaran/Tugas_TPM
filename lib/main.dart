@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart'; // TAMBAHAN 1: Import Hive
+import 'package:hive_flutter/hive_flutter.dart'; // Import Hive
 
-// TAMBAHAN 2: Ubah main() menjadi async karena proses database butuh waktu tunggu
-void main() async { 
-  // TAMBAHAN 3: Baris wajib jika main() menggunakan async
-  WidgetsFlutterBinding.ensureInitialized(); 
-  
-  // TAMBAHAN 4: Menyiapkan dan membuka folder database lokal untuk keranjang
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await Hive.initFlutter();
-  await Hive.openBox('cart_box'); 
+  await Hive.openBox('cart_box');
 
   runApp(const CaterSmartApp());
 }
@@ -25,7 +22,9 @@ class CaterSmartApp extends StatelessWidget {
       ),
       home: const Scaffold(
         body: Center(
-          child: Text("Template CaterSmart Siap! Silakan Orang B mulai ngoding UI."),
+          child: Text(
+            "Template CaterSmart Siap! Silakan Orang B mulai ngoding UI.",
+          ),
         ),
       ),
     );
