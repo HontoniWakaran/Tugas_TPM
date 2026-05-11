@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart'; // Import Hive
+import 'package:hive_flutter/hive_flutter.dart';
+import 'pages/login_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await Hive.initFlutter();
   await Hive.openBox('cart_box');
-
   runApp(const CaterSmartApp());
 }
 
@@ -17,16 +16,11 @@ class CaterSmartApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'CaterSmart',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.orange, // Tema warna dasar katering
+        primarySwatch: Colors.orange,
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            "Template CaterSmart Siap! Silakan Orang B mulai ngoding UI.",
-          ),
-        ),
-      ),
+      home: const LoginPage(), // 👈 Sudah diganti
     );
   }
 }
