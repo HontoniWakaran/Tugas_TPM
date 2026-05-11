@@ -9,16 +9,31 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
 
-  http: ^1.2.0
-  flutter_secure_storage: ^9.2.2
+  # UI & Animasi
+  animate_do: ^3.0.2
+
+  # Database lokal
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+
+  # Auth & Keamanan
   local_auth: ^2.3.0
+  crypto: ^3.0.3
+  flutter_secure_storage: ^9.2.2
+  shared_preferences: ^2.2.2
+
+  # Networking
+  http: ^1.2.0
+
+  # Sensor
   sensors_plus: ^5.0.1
-  url_launcher: ^6.3.0
+
+  # Notifikasi
   flutter_local_notifications: ^17.2.1
+
+  # Lainnya
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
